@@ -10,37 +10,42 @@ import WindiCSS from 'vite-plugin-windicss';
 import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess';
 import EnvironmentPlugin from 'vite-plugin-environment';
 
-export default defineConfig({
-  plugins: [
-    svelte({
-      preprocess: sveltePreprocess({ typescript: true }),
+export default defineConfig(({ mode, command }) => {
+  const isBuild = command === "build";
 
-      onwarn(warning, defaultHandler) {
-        if (warning.code.includes('a11y')) return; // Ignores the a11y warnings when compiling. This does not apply to the editor, see comment at bottom for vscode instructions
-
-        // handle all other warnings normally
-        defaultHandler!(warning);
-      },
-    }),
-    WindiCSS(),
-    EnvironmentPlugin('all'),
-  ],
-  build: {
-    target: 'esnext',
-    rollupOptions: {
-      input: 'index.html',
-    },
-  },
-  test: {
-    globals: true,
-    setupFiles: ['./src/__tests__/setup_tests.ts'],
-    poolOptions: {
-      threads: {
-        // threads disabled for now due to https://github.com/vitest-dev/vitest/issues/1982
-        singleThread: true,
+  return {
+    base: isBuild ? "/ai/microbit/" : "/",
+    plugins: [
+      svelte({
+        preprocess: sveltePreprocess({ typescript: true }),
+  
+        onwarn(warning, defaultHandler) {
+          if (warning.code.includes('a11y')) return; // Ignores the a11y warnings when compiling. This does not apply to the editor, see comment at bottom for vscode instructions
+  
+          // handle all other warnings normally
+          defaultHandler!(warning);
+        },
+      }),
+      WindiCSS(),
+      EnvironmentPlugin('all'),
+    ],
+    build: {
+      target: 'esnext',
+      rollupOptions: {
+        input: 'index.html',
       },
     },
-  },
+    test: {
+      globals: true,
+      setupFiles: ['./src/__tests__/setup_tests.ts'],
+      poolOptions: {
+        threads: {
+          // threads disabled for now due to https://github.com/vitest-dev/vitest/issues/1982
+          singleThread: true,
+        },
+      },
+    },
+  };
 });
 
 /**
