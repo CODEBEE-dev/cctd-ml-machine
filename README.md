@@ -34,6 +34,7 @@ CCTD-ML-MACHINE 을 CodeBridge 에 맞게 커스터마이징 하는 프로젝트
     ```bash
     npm install
     ```
+    > git push 를 이용하려면 로컬 컴퓨터에 git lfs 가 필요합니다.
 3. 개발 실행
     ```bash
     npm run dev
