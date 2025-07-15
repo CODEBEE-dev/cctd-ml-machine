@@ -7,22 +7,23 @@
 <script lang="ts">
   import { t } from '../../i18n';
   import ImageSkeleton from '../../components/ui/skeletonloading/ImageSkeleton.svelte';
+  const base = import.meta.env.BASE_URL ?? '/';
 
   const MLStepsContent: { image: string; text: string }[] = [
     {
-      image: '/imgs/model_green.svg',
+      image: `${base}imgs/model_green.svg`,
       text: 'content.index.MLExplainer1',
     },
     {
-      image: '/imgs/data_representation.svg',
+      image: `${base}imgs/data_representation.svg`,
       text: 'content.index.MLExplainer2',
     },
     {
-      image: '/imgs/ML_train.svg',
+      image: `${base}imgs/ML_train.svg`,
       text: 'content.index.MLExplainer3',
     },
     {
-      image: '/imgs/ML_predict.svg',
+      image: `${base}imgs/ML_predict.svg`,
       text: 'content.index.MLExplainer4',
     },
   ];
