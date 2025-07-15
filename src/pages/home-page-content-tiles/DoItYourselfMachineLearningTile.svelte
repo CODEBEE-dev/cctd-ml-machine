@@ -7,6 +7,7 @@
 <script lang="ts">
   import { t } from '../../i18n';
   import ImageSkeleton from '../../components/ui/skeletonloading/ImageSkeleton.svelte';
+  const base = import.meta.env.BASE_URL ?? '/';
 </script>
 
 <p class="text-lg mb-2 font-semibold">
@@ -27,7 +28,7 @@
         <ImageSkeleton
           alt="microbit guide"
           height={114}
-          src="./imgs/microbit_guide.svg"
+          src={`${base}imgs/microbit_guide.svg`}
           width={200} />
       </div>
     </div>
