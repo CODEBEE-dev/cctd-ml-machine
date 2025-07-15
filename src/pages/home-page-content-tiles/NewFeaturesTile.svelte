@@ -7,6 +7,7 @@
 <script lang="ts">
   import { t } from '../../i18n';
   import ImageSkeleton from '../../components/ui/skeletonloading/ImageSkeleton.svelte';
+  const base = import.meta.env.BASE_URL ?? '/';
 </script>
 
 <p class="text-lg mb-2 font-semibold">{$t('content.index.newzHeading')}</p>
@@ -17,7 +18,7 @@
 <div class="flex justify-center">
   <ImageSkeleton
     alt="One of the new visualizations"
-    src="/imgs/math_version.png"
+    src={`${base}imgs/math_version.png`}
     width={350} />
 </div>
 <br />

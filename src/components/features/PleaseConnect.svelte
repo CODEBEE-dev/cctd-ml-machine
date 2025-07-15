@@ -13,6 +13,7 @@
 
 <script lang="ts">
   import { t } from '../../i18n';
+  const base = import.meta.env.BASE_URL ?? '/';
 </script>
 
 <div>
@@ -25,7 +26,7 @@
   <div class="text-center ml-auto mr-auto mb-2 mt-2">
     <img
       class="m-auto arrow-filter-color"
-      src="/imgs/down_arrow.svg"
+      src={`${base}imgs/down_arrow.svg`}
       alt="down arrow icon"
       width="35px" />
   </div>
