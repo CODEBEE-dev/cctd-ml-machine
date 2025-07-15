@@ -107,6 +107,8 @@
   const handleSearchWithoutName = () => {
     attemptToConnect();
   };
+
+  const base = import.meta.env.BASE_URL ?? '/';
 </script>
 
 <main>
@@ -132,7 +134,7 @@
     <!-- Show spinner while connecting -->
     <div class="w-650px flex flex-col justify-center items-center">
       <p>{$t('popup.connectMB.bluetooth.connecting')}</p>
-      <img alt="loading" src="/imgs/loadingspinner.gif" width="100px" />
+      <img alt="loading" src={`${base}imgs/loadingspinner.gif`} width="100px" />
     </div>
     {#if $timeouted}
       <div>

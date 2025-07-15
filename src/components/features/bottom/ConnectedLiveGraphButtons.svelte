@@ -15,6 +15,7 @@
   export let onInputDisconnectButtonClicked: () => void;
 
   const model = stores.getClassifier().getModel();
+  const base = import.meta.env.BASE_URL ?? '/';
 </script>
 
 <!-- These are the buttons that are present while the input micro:bit is connected-->
@@ -30,7 +31,7 @@
       {:else}
         <!-- svelte-ignore missing-declaration -->
         <StandardButton onClick={TypingUtils.emptyFunction} color="disabled">
-          <img alt="loading" src="imgs/loadingspinner.gif" style="height:24px" />
+          <img alt="loading" src={`${base}imgs/loadingspinner.gif`} style="height:24px" />
         </StandardButton>
       {/if}
     {:else}
@@ -46,7 +47,7 @@
         >{$tr('footer.disconnectButton')}</StandardButton>
     {:else}
       <StandardButton onClick={TypingUtils.emptyFunction} color="disabled">
-        <img alt="loading" src="/imgs/loadingspinner.gif" style="height:24px" />
+        <img alt="loading" src={`${base}imgs/loadingspinner.gif`} style="height:24px" />
       </StandardButton>
     {/if}
   </div>
