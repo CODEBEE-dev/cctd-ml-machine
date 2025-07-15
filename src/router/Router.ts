@@ -6,14 +6,16 @@
 
 import { writable, type Writable, get, derived } from 'svelte/store';
 
+const base = import.meta.env.BASE_URL ?? '/';
+
 export const Paths = {
-  HOME: '/',
-  PLAYGROUND: 'playground',
-  DATA: 'data',
-  TRAINING: 'training',
-  VALIDATE: 'validate',
-  MODEL: 'model',
-  FILTERS: 'training/filters',
+  HOME: base,
+  PLAYGROUND: `${base}playground`,
+  DATA: `${base}data`,
+  TRAINING: `${base}training`,
+  VALIDATE: `${base}validate`,
+  MODEL: `${base}model`,
+  FILTERS: `${base}training/filters`,
 } as const;
 
 export type PathType = (typeof Paths)[keyof typeof Paths];
