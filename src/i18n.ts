@@ -20,7 +20,7 @@ register('ko', () => import('./assets/messages/ui.ko.json'));
 
 const initialLocale = browserLang({
   languages: ['en', 'da', 'de', 'ko'],
-  fallback: 'en',
+  fallback: 'ko',
 });
 
 const persistantLocale = new PersistantWritable(initialLocale, 'lang');
