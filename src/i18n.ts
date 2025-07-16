@@ -16,9 +16,10 @@ export const tr = translate; // make intellisense a little better
 register('en', () => import('./assets/messages/ui.en.json'));
 register('da', () => import('./assets/messages/ui.da.json'));
 register('de', () => import('./assets/messages/ui.de.json'));
+register('ko', () => import('./assets/messages/ui.ko.json'));
 
 const initialLocale = browserLang({
-  languages: ['en', 'da', 'de'],
+  languages: ['en', 'da', 'de', 'ko'],
   fallback: 'en',
 });
 

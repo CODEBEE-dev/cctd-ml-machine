@@ -39,7 +39,7 @@
     on:click={onClickFunction}>
     <!-- Title -->
     <div class="h-full mt-6.2 relative">
-      <p class="text-lg font-medium text-center" class:underline={isExpanded}>
+      <p class="text-base font-medium text-center" class:underline={isExpanded}>
         {$t(title)}
       </p>
       <div class="absolute top-3px right-12">
