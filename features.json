@@ -1,9 +1,9 @@
 {
-  "title": "ML-Machine",
-  "knnModel": false,
-  "lossGraph": false,
-  "makecode": false,
-  "liveGraphInputValues": false,
-  "recordingScrubberValues": false,
-  "modelValidation": false
+  "title": "CodeBridge Microbit AI",
+  "knnModel": true,
+  "lossGraph": true,
+  "makecode": true,
+  "liveGraphInputValues": true,
+  "recordingScrubberValues": true,
+  "modelValidation": true
 }

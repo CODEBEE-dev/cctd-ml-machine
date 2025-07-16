@@ -42,7 +42,8 @@
         class="text-secondarytext font-extrabold self-center"
         class:text-3xl={!isSmall}
         class:text-2xl={isSmall}>
-        {getFeature(Feature.TITLE)}
+        <span class="text-xl font-extrabold text-white tracking-tight select-none cursor-pointer" on:click={() => navigate(base)}>CodeBridge</span>
+        <span class="text-[12px] text-blue-100 font-semibold bg-white/10 px-2 py-0.5 rounded-lg select-none">micro:bit AI</span>
       </p>
       <div class="text-white self-center ml-4 focus:outline-none">
         <button
