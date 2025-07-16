@@ -15,13 +15,13 @@
 </script>
 
 <main>
-  <div class="grid grid-cols-2 w-600px text-center">
+  <div class="grid grid-cols-2 w-650px text-center">
     <div
       class="hover:cursor-pointer mr-2 border-gray-200
              border border-solid rounded-lg p-6 shadow-lg"
       on:click={onStartUsbClick}>
-      <h1 class="font-bold">
-        {$t('connectMB.main.usbHeader')}
+      <h1 class="font-bold text-xl mb-5">
+        {@html $t('connectMB.main.usbHeader')}
       </h1>
       <p class="mb-5">
         {$t('connectMB.main.usbBody')}
@@ -33,8 +33,8 @@
     <div
       class="hover:cursor-pointer ml-2 border-gray-200 border border-solid rounded-lg p-6 shadow-lg"
       on:click={onStartBluetoothClick}>
-      <h1 class="font-bold">
-        {$t('connectMB.main.btHeader')}
+      <h1 class="font-bold text-xl mb-5">
+        {@html $t('connectMB.main.btHeader')}
       </h1>
       <p class="mb-5">
         {$t('connectMB.main.btBody')}

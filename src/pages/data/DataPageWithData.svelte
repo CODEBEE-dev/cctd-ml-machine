@@ -38,7 +38,8 @@
 </StandardDialog>
 <ConnectDialogContainer />
 
-<div class="relative flex h-7">
+<!-- <div class="relative flex h-7"> -->
+<div class="flex h-7">
   <div class="absolute left-3 flex">
     <Information
       isLightTheme={false}
