@@ -152,6 +152,8 @@
       declaring = false;
     }
   }
+
+  const base = import.meta.env.VITE_BASE_URL ?? '/';
 </script>
 
 <div class="flex-row flex">
@@ -229,7 +231,7 @@
             <ImageSkeleton
               height={95}
               width={140}
-              src="/imgs/microbit_record_guide.svg"
+              src={base + 'imgs/microbit_record_guide.svg'}
               alt="microbit recording guide" />
           </div>
           <p class=" text-center absolute w-60px right-23px top-30px">

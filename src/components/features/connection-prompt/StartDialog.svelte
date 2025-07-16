@@ -10,6 +10,8 @@
 
   export let onStartUsbClick: () => void;
   export let onStartBluetoothClick: () => void;
+
+  const base = import.meta.env.VITE_BASE_URL ?? '/';
 </script>
 
 <main>
@@ -24,7 +26,7 @@
       <p class="mb-5">
         {$t('connectMB.main.usbBody')}
       </p>
-      <StandardButton icon="/imgs/usb.svg">
+      <StandardButton icon={base + 'imgs/usb.svg'}>
         {$t('connectMB.main.installButton')}
       </StandardButton>
     </div>
@@ -37,7 +39,7 @@
       <p class="mb-5">
         {$t('connectMB.main.btBody')}
       </p>
-      <StandardButton icon="/imgs/bluetooth.svg">
+      <StandardButton icon={base + 'imgs/bluetooth.svg'}>
         {$t('connectMB.main.connectButton')}
       </StandardButton>
     </div>

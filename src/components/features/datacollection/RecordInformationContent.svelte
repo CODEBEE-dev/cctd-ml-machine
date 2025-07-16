@@ -13,6 +13,7 @@
 
   const colors = getInfoBoxColors(isLightTheme);
   const textColor = colors.textColor;
+  const base = import.meta.env.VITE_BASE_URL ?? '/';
 </script>
 
 <div style="color: {textColor}">
@@ -27,7 +28,7 @@
       <ImageSkeleton
         alt="microbit recording guide"
         height={134}
-        src="/imgs/microbit_record_guide.svg"
+        src={base + 'imgs/microbit_record_guide.svg'}
         width={200} />
     </div>
     <p class=" text-center absolute w-60px right-10px top-35px">

@@ -9,6 +9,8 @@
   import MediaQuery from '../../components/layout/MediaQuery.svelte';
   import ImageSkeleton from '../../components/ui/skeletonloading/ImageSkeleton.svelte';
   import { t, tr } from '../../i18n';
+
+  const base = import.meta.env.VITE_BASE_URL ?? '/';
 </script>
 
 <GestureCard small>
@@ -18,7 +20,7 @@
         <ImageSkeleton
           height={95}
           width={140}
-          src="/imgs/microbit_record_guide.svg"
+          src={base + 'imgs/microbit_record_guide.svg'}
           alt="microbit recording guide" />
       </div>
       <p class="self-center text-center pb-2">
