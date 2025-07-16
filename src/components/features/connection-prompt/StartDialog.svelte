@@ -11,7 +11,7 @@
   export let onStartUsbClick: () => void;
   export let onStartBluetoothClick: () => void;
 
-  const base = import.meta.env.VITE_BASE_URL ?? '/';
+  const base = import.meta.env.BASE_URL ?? '/';
 </script>
 
 <main>

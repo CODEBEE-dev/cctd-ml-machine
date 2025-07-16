@@ -10,7 +10,7 @@
   import ImageSkeleton from '../../components/ui/skeletonloading/ImageSkeleton.svelte';
   import { t, tr } from '../../i18n';
 
-  const base = import.meta.env.VITE_BASE_URL ?? '/';
+  const base = import.meta.env.BASE_URL ?? '/';
 </script>
 
 <GestureCard small>
