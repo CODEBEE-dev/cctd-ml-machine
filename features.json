@@ -1,9 +1,0 @@
-{
-  "title": "CodeBridge Microbit AI",
-  "knnModel": true,
-  "lossGraph": true,
-  "makecode": true,
-  "liveGraphInputValues": true,
-  "recordingScrubberValues": true,
-  "modelValidation": true
-}
